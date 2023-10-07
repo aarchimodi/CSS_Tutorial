@@ -1,0 +1,213 @@
+/* this is the best practice */
+/* everything will stck to the border of the website */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#navList{
+    padding: 15px;
+    /* bullet points wont appear */
+    list-style: none ;
+    font-size: 1.5rem;
+
+    /* text 'recipes' and 'home/contact/about' are ek k niche ek ek i want them in extreme right and left so for that i need to create this as flex   */
+    display: flex;
+    /* by default sab row mai ho jayega content */
+   
+   /* content will go extreme right and left */
+    justify-content: space-around ;
+    align-items: center;
+
+
+
+}  
+ 
+nav{
+    width: 100%;
+    /* overflow-x: none; */
+}
+
+
+.navContainer{
+    width: 100vw;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,224,233,1) 100%);
+   
+    /* means minimum 100px to lena pdega */
+    min-height: 80px;
+
+    display: flex;
+    justify-content: center ;
+
+
+}
+
+.container{
+   width: 100vw;
+   height:100%;
+   overflow-x: none;
+   background-color: rgba(245, 179, 219, 0.358);
+   
+   }
+
+#navLogo{
+    font-size: 2.8rem;
+    color: rgba(0, 0, 0, 0.549);
+   
+
+}
+#navItems{
+    display: flex;
+
+    /* home/contact/about ki spacing increase */
+    gap: 40px;
+}
+
+/* remove underline from anchor tag */
+a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.549);
+}
+
+.footerBox{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,224,233,1) 100%);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    min-height: 40px;
+    
+}
+/* footerbox k ander jo para hai uska ka color chnge krna hai */
+.footerBox p{
+    font-size: 1rem;
+
+
+}
+
+.contentBox{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 3rem;
+    box-shadow: 10px 8px 10px 5px blueviolet;
+}
+
+
+.item1 {
+    display: flex;
+   justify-content: space-around ;
+   align-items: center;
+}
+
+.item2 {
+    display: flex;
+   justify-content: space-around ;
+   align-items: center;
+}
+
+/* always make sure whv u do overlay mark that box as position : relative  */
+.rightBox1{
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s linear 0s;
+}
+
+/* this is the path */
+.rightBox1 img{
+ height: 200px;
+ width: 300px;
+ border-radius: 20px;
+}
+/* jaise hi right box pe hover hoga it should scale */
+.rightBox1:hover{
+    transform: scale(1.1);
+    /* for smoothness */
+    transition: all 0.6s linear 0s;
+}
+
+.rightBox2 img{
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+   }
+
+   .rightBox2 img:hover{
+    transform: scale(1.1);
+    /* for smoothness */
+    transition: all 0.6s linear 0s;
+}
+
+
+   .leftBox1{
+    display: flex;
+    /* text gulab jamun ,ingredients, recipe ko ek k niche ek lane k liye */
+    flex-direction: column;
+    gap: 20px;
+    
+   }
+
+   /* bhot sare headings hote hai html file mai toh konse heading ko style krna hoga to overcomethis we specify path */
+  .leftBox1 h2{
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, 0.722); ;
+  }
+
+  .leftBox2{
+    display: flex;
+    /* text barfi ,ingredients, recipe ko ek k niche ek lane k liye */
+    flex-direction: column;
+    gap: 20px;
+    
+   }
+
+  .leftBox2 h2{
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, 0.722); ;
+  }
+
+.ingBox1{
+    font-size: 1rem;
+}
+
+.recipeBox1{
+    font-size: 1rem;
+
+}
+.rightBox1 .overlay{
+    position: absolute;
+    /* top se zero */
+    top: 0;
+
+    /* left se bhi zero */
+    left: 0;
+
+    /* height width apne parents k acc set */
+    height: 100%;
+    width: 100%;
+    background-color: rgba(97, 85, 85, 0.434);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    /* koi bhi chiz visible karani ho to opacity 1 and invisible karani ho to 0 */
+    /* means if hover na kare toh  invisible (0) */
+    opacity: 0;
+    transition: all 0.3s linear 0s;
+}
+/* and hover kare toh 1 */
+.rightBox1:hover .overlay{
+    opacity: 1;
+}
+
+
+
+/* span is an element and not class . wont come  */
+.rightBox1 .overlay span{
+    color: white;
+    font-size: 1.2rem;
+}
