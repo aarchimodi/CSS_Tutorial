@@ -1,0 +1,58 @@
+/* external css */
+h1{
+    font-family: cursive;
+    text-align: center;
+    
+}
+
+p{
+    color: rgb(24, 223, 24);
+    line-height: 50px;
+    text-transform: capitalize;
+}
+
+
+#box1{
+    height: 100px;
+    width: 100px;
+    background-color: olive;
+    position: static;
+    /* static property mai top,bottom,left,right,z-index property wont work*/
+
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV7J_zXwoFzVLXP-5n2Dimz7x_9PrMcrRsvA&usqp=CAU");
+
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+#box2{
+    height: 100px;
+    width: 100px;
+    background-color: maroon;
+    position: relative;
+    left: 20px;
+    bottom: 20px;
+    z-index: -4;
+}
+
+#box3{
+    height: 100px;
+    width: 100px;
+    background-color: palevioletred;
+
+    /* by marking absolute box3 will overlap on box4 bec vo document se hat gya and ab vo document k body tag k top se 20px change ho gya */
+    position: absolute;
+    top: 20px;
+}
+
+#box4{
+    height: 100px;
+    width: 100px;
+    background-color: goldenrod;
+    position: sticky;
+    top: 30px;
+    
+}
+
