@@ -1,0 +1,99 @@
++<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Tutoraial</title>
+    
+    <!-- internal css -->
+    <style>
+
+
+        /* using element selector */
+        p{
+            color: blue;
+        }
+
+
+
+        /* using id selector - (while using id selector always begin with # )*/
+        #abc{
+            color: chartreuse;
+        }
+
+
+
+        /* using class selector - (while using class selector always begin with .) */
+        .aside1{
+            background-color: yellow;
+            background-color: hotpink;
+            background-color: chocolate;
+        }
+        /* suppose u added 3 times the bg color then the last one will be silected and bg color will be chocolate */
+
+
+
+
+        /* using group selector - (while using group selector always add ,) */
+        /* suppose u want to style multiple elements from the web page for eg : i want to style p and article tag sathme */
+        span,code{
+           font-family: cursive;
+        }
+
+
+        /* styling aside k aside1 class ko  */
+        aside.aside1{
+            text-align: center;
+        }
+
+
+    </style>
+    <link rel="stylesheet" href="css_style.css">
+</head>
+<body>
+
+    <h1 id="abc">Welcome To CSS</h1>
+
+    <h2 id="dfg">This is Css</h2>
+
+    <!-- inline css -->
+    <!-- <p style="background-color: yellowgreen;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet pariatur voluptas aliquid deserunt recusandae ratione tempora delectus non excepturi reprehenderit magnam vero possimus inventore est cupiditate nostrum tenetur, odit maxime?</p>
+
+    
+
+    <p style="color: blueviolet;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In deserunt ut quas cupiditate nam. Necessitatibus voluptatibus rem commodi sit eveniet.
+    </p>
+     -->
+
+
+    <p >
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, accusantium?
+    </p>
+
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, eligendi!
+    </p>
+
+    <span>
+        this is span tag
+    </span><br>
+
+    <code>
+        push pop traverse
+    </code>
+
+
+    <aside class="aside1"> this is aside</aside>
+    <aside class="aside1">This is aside2</aside>
+
+
+
+</body>
+
+<footer>
+    <!-- Note : when the css is linked in 3 places including internal, external and inline ,more imp is given to inline css - inline css is a very bad practice 
+    - it is often recommended to use external css
+    - when external and internal css is linked , imp is given on the basis of order eg : if link tag is written first then external css is given imp and if style tag is written first then internal is given imp  -->
+</footer>
+</html>
