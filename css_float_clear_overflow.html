@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float clear and overflow</title>
+    <style>
+
+
+        /* float property in css is used for positioning and layout but common usage is for image floating to one side and letting text wrap on next side  */
+
+        /* note : float property works only on img tag  */
+
+        #img1{
+            float: right;
+            height: 100px;
+          
+            
+        } 
+        /* note : clear property works only with float property */
+
+        #img2{
+            float: left;
+            height: 100px;
+        }
+
+        #img3{
+            float: left;
+            height: 100px;
+            clear: left;  /* clear : left property says that wtv content is on my left side clear it and move it down so the image will move down */
+            /* default value of clear is none */
+        }
+
+        .box{
+            border: 2px solid black;
+            background-color: aquamarine;
+            overflow: auto;
+        }
+
+        .item{
+            background-color: brown;
+            border: 2px solid black;
+            width: 50px;
+            height: 50px;
+            margin: 2px; /*to create spaces in between the boxes*/
+            float: left;
+            /* - the moment u do float, the properies of the box(parent) class will be collapsed and this is known as "great collpase" in float
+
+            - these all child properties overflow on parent class 
+            
+            - to overcome this , will use overflow property for box class*/
+        }
+
+        .para1{
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            /* overflow: hidden; */ 
+            /* hidden property will hide the overflow content */
+            overflow: scroll;
+            /* u can also use auto */
+        }
+
+        
+
+       
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img id="img1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzLpURIUHJ46CPuCo2Tjon3QlmvhDQiHG8qw&usqp=CAU" class="img">
+
+        <img id="img2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzLpURIUHJ46CPuCo2Tjon3QlmvhDQiHG8qw&usqp=CAU" class="img">
+
+        <img id="img3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzLpURIUHJ46CPuCo2Tjon3QlmvhDQiHG8qw&usqp=CAU" class="img">
+
+
+        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores est soluta, voluptate ipsum iusto et molestias unde omnis! Neque qui voluptatum enim deleniti repellendus laudantium fugit quidem facilis explicabo nulla minus quod, hic praesentium? Recusandae nobis eius repellat excepturi laborum. Illo voluptatem distinctio ullam odio quaerat laboriosam reiciendis eius, dolor voluptatum perspiciatis sapiente assumenda magnam repellendus cumque quas unde eveniet tempore sunt nulla numquam saepe mollitia? Provident vitae beatae aspernatur, quo earum repellat iste deserunt eius labore dicta, doloribus magni dolorem! Animi repellendus natus amet laudantium quisquam earum, totam nesciunt possimus, illo, quas vero aut quod facere alias id eum!</p>
+
+    </div>
+    <br> <br>
+    <div class="box">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <div class="para1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque et, adipisci facere laudantium dolorem eius mollitia dignissimos deleniti culpa aut commodi distinctio odit illo reprehenderit blanditiis a sed quis tenetur animi, non sapiente doloribus? Culpa repellat beatae quisquam assumenda repellendus exercitationem, alias illum deserunt suscipit facere numquam possimus quasi delectus in expedita modi necessitatibus accusantium, optio rem. Quod accusantium doloribus itaque sit ipsum labore dicta facilis vel voluptate? Delectus ipsa dicta omnis laborum ipsam optio laboriosam pariatur iste! Officia neque odio quia nobis unde sequi modi, exercitationem dolores, culpa, necessitatibus est itaque? Perspiciatis assumenda quaerat maxime, nobis adipisci ad natus labore aut at autem animi nemo harum aliquam deleniti sed deserunt consectetur suscipit atque accusantium? Nostrum dicta modi est maiores quam inventore doloribus a provident velit aliquid minima quaerat iusto, laudantium illum atque voluptatibus repudiandae excepturi nobis! Ex et porro soluta iusto, incidunt blanditiis iste, harum qui nam libero a repellat consequuntur corrupti, quia sapiente aperiam sunt tempora. Provident unde autem magnam delectus voluptatum illum vero repellendus officia atque dignissimos dolorum quas corrupti blanditiis dolores recusandae, ab nemo distinctio sint adipisci quae! Voluptate nostrum dicta perspiciatis earum laudantium labore qui assumenda porro illum eaque reiciendis enim alias quos quam ratione magni, quisquam soluta illo aperiam exercitationem ipsa quibusdam voluptas! Laudantium expedita tenetur at quod perferendis libero veniam voluptatum aliquid natus vero, quaerat fugit, consectetur nam labore cumque pariatur aliquam ea earum aut fugiat eveniet? Doloribus maxime adipisci porro facere sint, qui vitae accusamus est id, minima corrupti ipsum dolores sequi.</p>
+    </div>
+    
+
+
+    
+</body>
+</html>
