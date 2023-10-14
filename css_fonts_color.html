@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css_Fonts</title>
+
+    <!-- how to import external font click on the specific font > click on the + button and copy it > also when u move down you'll see the font-family as well copy that and add it inside the style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+
+
+
+    <style>
+        p{
+            font-style: italic;
+            font-size: 30px;  /* just like the speed of the car is measured in kmph similarly font size is measured in pixels*/
+
+            font-weight: 700; /* text thoda thick ho jayega */
+           
+            font-family: 'Oswald', sans-serif;
+            line-height: 30px ; /* the space between 2 lines */
+        }
+
+        /* 4 ways to add colors to the font */
+
+        /* using their exact names */
+        #firstpara{
+            background-color: brown;
+            color: yellow; /*text color*/
+        }
+
+        /* using rgb- this can provide you the customized color */
+        #secpara{
+            background-color: rgb(111, 111, 174); /* u can put this nos. (0-255) acc to your choice */
+
+        }
+
+        #thirdpara{
+            background-color: rgba(0, 128, 0, 0.508);  /*rgba here a means alpha means how transparent the color will be */
+        }
+
+        /* using hexadecimal value(0-15) */
+        .firstclass{
+            background-color: #ffffadef; /*always use # while using hexadecimal value */
+            /* ff-red ff-green ad-blue ef-alpha */
+        }
+
+        /* using hsl- [hue saturation(intensity) light]   */
+        #forthpara{
+            background-color: hsl(140,80% ,50%)   
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to css fonts</h1>
+
+    <p id="firstpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nemo velit esse quod nostrum libero dolor consectetur odio cumque beatae exercitationem magni dolore, ullam facere nulla soluta minima at corporis.</p>
+
+    <p id="secpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius vel dolor alias, commodi placeat exercitationem sunt esse a nostrum facilis?</p>
+
+    <p id="thirdpara">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo est illum unde.</p>
+
+    <p class="firstclass">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis hic natus laudantium ipsa vel aspernatur totam, minima, consectetur alias maiores voluptatum error quasi. Unde, error?</p>
+
+    <p id="forthpara">The look of the font is "font-style"</p>
+</body>
+</html>
