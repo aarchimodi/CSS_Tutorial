@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+
+   <style>
+    .box{
+        background-color: royalblue;
+            height: 20vh;
+            width: 40vw;
+            border: 3px solid;
+            padding: 10px;
+
+            /* TP means konsi property pe transition hona chahiye */
+            /* transition-property:  background-color;
+            transition-property: width; */
+            transition-property: all;
+
+            /* kitne time tak transition hona chahiye */
+            transition-duration: 4s;
+            transition-delay: 1s;
+            transition-timing-function: ease-in-out;
+            rotate: 45deg;
+            top: 50px;
+           
+    }
+    /* srf hover krne se bhi transition hoga but transition apply krne se smoothly transition hoga */
+
+    /* humne TP bg color pe set kiya hai so smoothly color chnage bg color hoga and width fatak se bdhega bec tp pe color ki set hai ywe can also set TP : all*/
+
+    /* pseudo class consists of colon and followed by any pseudo class name */
+
+    .box:hover{
+        background-color: brown;
+        width: 160vw;
+        height: 160vh;
+    }
+   </style>
+</head>
+<body>
+    <div class="box">
+        box1
+    </div>
+</body>
+</html>
