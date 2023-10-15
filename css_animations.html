@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+
+    <style>
+
+        *{
+            /* that extra space around the border will disapper when u give margin and padding */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            /* note : bg color will only be displayed whwn u give height and width */
+           background-color: yellow;
+           height: 100vh;
+           width: 100vw;
+           border: 3px solid ;
+        }
+
+        .box{
+            background-color: blueviolet;
+            height: 20vh;
+            width: 40vw;
+            border: 3px solid;
+            border-radius: 10px;
+
+            /* margin is for creating space around blue box  */
+            margin: 10px;
+             /* padding is for creating space around the content that that is box1  */
+            padding: 10px;
+
+
+            /* top left right bottom vali property hum use kr sake */
+            position: relative;
+
+            /* rightMovement is customized name that will be used in keyframes */
+            animation-name: rightMovement;
+
+            /*left se right jane mai ktna time lagega */
+            animation-duration: 5s;
+
+            /* for how many times the animation should iterate kitni baar chahiye iteration */
+            animation-iteration-count: 1;
+
+            /* animation start hone se pehle kitna late (delay) hona chahiye */
+            animation-delay: 2s;
+
+
+            /* specifies the speed of the animation eg : left mai box fast speed se jara  but right reach mai slow*/
+
+            /* linear play an animation with the same speed from beginning to end: */
+
+            /* by default it is 
+
+            ease : where The animation has a slow start, then fast, before it ends slowly	
+
+            ease-in	: The animation has a slow start	
+            ease-out : The animation has a slow end	
+            ease-in-out : The animation has both a slow start and a slow end */
+
+            animation-timing-function: linear;
+
+
+
+            /* u can also customize the speed */
+            /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 0.1); */
+
+
+            /*  box alternate left right pe bounce krega*/
+
+            /*  animation-direction: alternate; */
+
+            /* reverse mai destination se source mai jayega */
+            /* animation-direction: reverse; */
+
+
+
+            /* this will tell us wht to do once the box reaches the destination or source lets say left se right jara hai toh right jane k baad what to do   */
+            /* forwards means right aane k baad ruk jana */
+            /* animation-fill-mode: both; */
+            animation-direction: alternate;
+
+
+
+        }
+
+    
+
+        /* now here identifeir is rightMovement */
+        @keyframes rightMovement {
+            from{
+                top: 0;
+                left: 0;
+
+            }
+
+            to{
+
+                top: 0;
+                left: 1200px;
+            }
+        }
+
+
+        .box2{
+
+            background-color: hotpink;
+            height: 20vh;
+            width: 40vw;
+            border: 3px solid;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+            position: relative;
+            
+            /* shorthand notation  */
+            /*  animation-duration: 3s;
+                animation-iteration-count: 1;
+                animation-direction: linaer;
+                animation-name: leftMovement;
+               
+             */   
+
+            
+            animation: 5s 1 2s ease-in leftMovement;
+
+            }
+
+            @keyframes leftMovement {
+            from{
+                top: 0px;
+                left: 0px;
+
+            }
+
+            to{
+
+                top: 1000px;
+                left: 1200px;
+            }
+        }
+
+
+
+        #circle{
+            background-color:green;
+            height: 5px;
+            width: 5px;
+            border: 3px solid;
+            border-radius: 80px;
+            padding: 80px;
+            margin: 10px;
+            position: relative;
+            animation: 5s 1 2s ease-in circleMovement;
+
+        }
+
+        @keyframes circleMovement {
+            0%{
+
+                top : 1%;
+                left: 4%;
+            }
+            25%{
+
+                top : 50%;
+                left: 40%;
+            }
+            50%{
+                top : 14%;
+                left: 48%;
+
+            }
+            100%{
+                top : 51%;
+                left: 64%;
+
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- when one element shifts from one styling to another styling its known as animations -->
+    <!-- for eg : i have a div and it is orange in colour but when i hover it , it chnages color to green (it chnaged its style) -->
+
+    <div class="container">
+
+        <div class="box">
+            box1
+        </div>
+
+        <div class="box2">
+            box2
+
+        </div>
+
+        <div id="circle" >
+            circle
+        </div>
+    </div>
+</body>
+</html>
