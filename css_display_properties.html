@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css display properties</title>
+
+    <style>
+        h1{
+            border: 5px solid;
+            display: inline-block;
+        }
+        h2{
+            border: 5px solid;
+            display: inline-block;
+            width: 500px;
+            height: 500px;
+        }
+        *{
+            margin: 0;
+            padding: 0%;
+
+            /* It ensures that the element's specified width and height are always respected, regardless of the padding and border sizes. */
+
+            /* The box-sizing: border-box property in CSS is a value that you can apply to elements to control how their width and height are calculated. By default, when you set the width and height of an element in CSS, it applies to the element's content box. This means that if you add padding and borders to the element, they will increase the overall width and height of the element, potentially causing layout issues.
+
+            However, when you apply box-sizing: border-box to an element, it changes the box model, and the specified width and height now include the padding and borders. In other words, the padding and border are included within the width and height of the element, and the content area shrinks to accommodate them. */
+            box-sizing: border-box;
+        }
+        .d1{
+            width: 300px;
+            height: 300px;
+            border: solid black 1px;
+            padding: 100px;
+            display: inline;
+           
+        }
+
+
+        #sp1{
+            border: 2px solid;
+            display: block; /*this will make span tag a block element*/
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to css display properties</h1>
+
+    <h2>Welcome</h2>
+
+    <div class="d1">
+        welcome to codehelp
+    </div>
+
+    <div class="d2" style="display: inline;">
+        welcome to love babbaar
+    </div>
+
+
+    <span id="sp1">
+        This is span tag
+    </span>
+
+    <span id="sp2"> 
+        this span tag 2
+    </span>
+    
+</body>
+</html>
