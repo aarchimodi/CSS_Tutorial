@@ -1,0 +1,182 @@
+<!-- display size k acc alag css apply krna hum media query se fulfill kr skte  hai  -->
+<!-- Examples: You could have one set of style rules for computer screens, one for printers, one for handheld devices, one for television-type devices, and so on. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        .box{
+            background-color: aqua;
+            height: 400px;
+            width: 400px;
+            border : 3px solid black;
+            margin: 2px; /*to bring space btw 2 boxes */
+        }
+
+        /* 500 ya 500px k niche dimensions gya toh box color aqua ho jayega and 500 pe green hi rahega*/
+        @media (min-width : 500px) {
+
+            /* on which element to apply animations mention it here it is box */
+            .box{
+                background-color: green;
+            }
+            
+        }
+
+
+
+        .box2{
+            margin: 2px; /*to bring space btw 2 boxes */
+            background-color: aqua;
+            height: 400px;
+            width: 400px;
+            border : 3px solid black;
+        }
+        /* 300 se 500 px k bich mai box blueviolet rahega else green ho jayega */
+        /* max width means zyada se zyada 500px  */
+        @media (min-width : 300px) and (max-width : 500px) {
+            .box2{
+                background-color: blueviolet;
+            }
+            
+        }
+
+
+        .container{
+            margin: 2px; /*to bring space btw 2 boxes */
+            background-color: aqua;
+            height: 500px;
+            width: 400px;
+            border : 3px solid black;
+            display: flex;
+            /* flex ki properties use krne k liye container ko flex banana padega and by default FD row hota hai */
+        }
+        .boxa{
+
+            height: 100px;
+            width: 100px;
+            border : 3px solid black;
+            background-color: blue;
+        }
+
+        .boxb{
+
+            height: 100px;
+            width: 100px;
+            border : 3px solid black;
+            background-color: chartreuse;
+            }
+
+        .boxc{
+
+            height: 100px;
+            width: 100px;
+            border : 3px solid black;
+            background-color: chocolate;
+            }
+
+        .boxd{
+
+            height: 100px;
+            width: 100px;
+            border : 3px solid black;
+            background-color: fuchsia;
+            }
+            /* greater than 300 k liye min  and less than k liye max width  */
+        @media (min-width : 300px) and (max-width : 500px) {
+            .container{
+                flex-direction: row;
+            }
+            
+            
+        }
+
+        /* active means whv u will click that button it will chnge the color */
+       div:active{
+        
+        background-color:blue
+       }
+
+
+        /* zyada se zyada 300px raega to flex-direction column otherwise aqua */ 
+        @media (max-width : 300px) and (max-width : 500px) {
+            .container{
+                flex-direction: column;
+            }
+        }
+
+
+        .container1{
+            margin: 2px; /*to bring space btw 2 boxes */
+            background-color: aqua;
+            height: 500px;
+            width: 400px;
+            border : 3px solid black;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .boxleft{
+            height: 100px;
+            width: 100px;
+            border : 3px solid black;
+            background-color: fuchsia;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .boxright{
+            height: 100px;
+            width: 100px;
+            border : 3px solid black;
+            background-color: hotpink;
+            display: flex;
+           
+        }
+
+        /* p is not a class dont put . before p */
+        p{
+            border: 1px solid;
+        }
+        @media (max-width: 600px) {
+            .container1{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        kkk
+    </div>
+
+    <div class="box2">
+        ggg
+    </div>
+
+    <div class="container">
+        <div class="boxa">boxa</div>
+        <div class="boxb">boxb</div>
+        <div class="boxc">boxc</div>
+        <div class="boxd">boxd</div>
+    </div>
+
+    <div class="container1">
+        <div class="boxleft">
+            <p>text1</p>
+            <p>text2</p>
+        </div>
+        <div class="boxright">
+            <img src="/Html Tutorial/vhvhvh.jpg" alt="" width="100px">
+        </div>
+    </div>
+
+    
+
+    
+</body>
+</html>
