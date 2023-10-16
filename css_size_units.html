@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size Units</title>
+
+    <style>
+        
+        .parent{
+            border: 2px solid black;
+            background-color: aqua;
+            width: 50%;
+
+        }
+
+        .child{
+            border: 2px solid black;
+            background-color: blue;
+            width: 25%;  /*  % means it covers that much part of the parent  */
+        }
+
+        .clss{
+            border: 3px blue solid;
+            height: 100vh;  /*covers whole view height*/
+            width: 50vw;   /*covers whole view width*/
+            font-size: 100px;   /*increases the font size*/
+
+        }
+
+         .parent2{
+            font-size: 10px; 
+             padding: 2px;
+         }
+
+        .child2{
+            font-size: 10em;  /*(10px of parent2 class * 10em of child2 class so the font visible will be of 100px) */
+            padding: 2em;  /* (The font size is 100px now and the padding is specified as 2em so 100px*2em = 200px)  */
+        }
+
+        /* difference between px and em is that em is a relative of parent class it will calculate the font size of parent class and child class (10px * 10em) 
+        
+        the same works with padding as well*/
+
+
+        .para{
+            font-size: 5rem; /*root em : means font size is relative to the size of the root elementwhich is the html element By default it is 16px. So, if the root element is 16px, an element with the value 5rem will be (16px * 5rem = 80px) */
+        }
+
+
+        /* em units are relative to their nearest parent's font size, which can lead to complexity and unpredictability in styles. rem (root elements) units, on the other hand, are always relative to the root font size and offer a more predictable and maintainable way to size elements in your CSS, making them particularly well-suited for responsive web design. */
+    </style>
+
+</head>
+<body>
+     <!-- parent class ka parent body hai and by deafault the fobt size is 16px -->
+
+    <div class="parent">
+       
+        <div class="child">Child</div>
+    </div>
+
+    <div class="clss">seeing how vh works</div>
+
+
+    <div class="parent2">
+        <div class="child2">child2</div>
+    </div>
+
+
+    <div class="para">first para</div>
+    <div id="box1" style=" height: 100px;
+    width: 100px;
+    background-color: goldenrod;
+    position: sticky;
+    top: 30px;">box1</div>
+</body>
+
+</html>
+
+
+<!-- note : In modern web design, relative units like percentages, em, and rem are often preferred because they make it easier to create flexible, responsive layouts that adapt to various screen sizes and devices.
+
+1) Relative units are units of measurement that are based on the size or characteristics of other elements in the document, making them adaptable to different screen sizes and devices. They are particularly useful for creating responsive designs.
+
+
+2)Absolute units are fixed units of measurement that do not change based on the size of other elements or the screen. They are less flexible for responsive design but can be useful in specific cases.-->
