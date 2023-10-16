@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow Effects</title>
+    <style>
+        :root{
+            --custom-width : 330px;
+        }
+
+
+        .container{
+            background-color:orangered;
+            height: 800px;
+            border: 2px black solid;
+            display: flex;
+
+            /* horizontally center mai lane k liye */
+            justify-content: center;
+
+            /* verticaaly center mai lane k liye */
+            align-items: center;
+            padding: 50px;
+        }
+
+         /* 1st way to do box-shadow  */
+        .box{
+            background-color: yellow;
+            border: 1px solid black;
+            width: 300px;
+            margin: 50px;
+            padding: 50px;
+           
+            /* 1st value : x ka offset(10px)  standing
+               2nd value : y ka offset(15px)  sleeping  
+               - lagane se oppsite direction mai shadow lag jayega*/
+               
+            box-shadow: 10px -15px blanchedalmond;
+           
+        }
+
+        /* 2nd way using blur-radius  */
+        .box1{
+            background-color: yellow;
+            border: 1px solid black;
+            width: 100px;
+            margin: 50px;
+
+           /* 1st value : x ka offset(10px)  standing
+               2nd value : y ka offset(15px)  sleeping  
+               3rd value : blur radius ka value (50px). jitna bada ye value hota jayega utna light blur affect  */
+               
+            box-shadow: 15px -15px 10px peru;
+           
+        }
+
+        /* note : x ka offset right and left mai move krne ka kaam krega
+                y ka offset top and bottom mai move krega
+                 */
+
+
+                 /* 3rd way using spread-radius  */
+        .box2{
+            background-color: yellow;
+            border: 1px solid black;
+            width: 300px;
+            margin: 100px;
+            padding: 10px;
+           
+           /* 1st value : x ka offset(10px)  standing
+               2nd value : y ka offset(15px)  sleeping  
+               3rd value : blur radius ka value (50px). jitna bada ye value hota jayega utna light blur affect 
+               4th value : spread radius ka value(40px). kitne dur tak blur will go */
+               
+            box-shadow: 15px -15px 50px 10px yellowgreen;
+           
+        }
+
+/* ab tak shadow box k bahar jara tha now the bring the shadow inside we use inset */
+        .box3{
+            /* this is how we create variables in css and use it see line 81
+            also vars can be used only within this box for diff box we need to create diff var in that scope.
+            do we have any option to used it globally ? well yes just define it in root refer line 9 */
+
+            /* --custom-width : 330px; */
+            background-color: yellow;
+            border: 1px solid black;
+            width: var(--custom-width);
+            margin: 100px;
+            padding: 10px;
+           /* for multiple shadows */
+            box-shadow: inset 15px 15px  purple, 15px 8px red;
+           
+        }
+
+
+        /* text shadow */
+        #p1{
+            text-shadow: 2px 2px 2px black;
+            /* by default shadow ka color black hota hai */
+        }
+
+
+    
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="/Html Tutorial/logo.jpg"  height="200">
+            <p>welcome to the tutorial</p>
+        </div>
+
+       
+    </div>
+
+    <div class="box1">
+        <p>box1</p>
+      </div>
+
+      <div class="box2">
+        <p id="p1">box2</p>
+      </div>
+
+      <div class="box3">
+        box3
+      </div>
+
+</body>
+</html>
