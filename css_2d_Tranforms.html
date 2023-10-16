@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Transforms</title>
+    <style>
+        .box{
+
+            background-color: olivedrab;
+            height: 40vh;
+            width: 40vw;
+            border: 3px solid;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* box will come in center */
+            margin: auto;
+            transition : all 2s linear 1s;
+
+           
+
+        } 
+        .box:hover{
+            /* note : transform always works in hover */
+
+            /* transform: rotate(45deg); */
+
+             /* transform: rotate(-45deg); anti clockwise move krega */
+
+            /* apni size se 2times ho jayega */
+            transform: scale(2);
+
+            /* apni size se chota ho jayega  */
+            transform: scale(0.5);
+
+
+            /* box 45 deg se tilt ho jayega */
+            transform: skew(45deg);
+
+
+            /* box side mai move karega and -500 px pe direction change ho jayegi */
+            /* transform: translate(500px); */
+
+
+            /* box niche move karega */
+            /* transform: translate(0px, 500px); */
+
+
+        }
+
+        p{
+            font-size: 20px;
+        }
+
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    </style>
+
+    <!-- transforms property is for scaling and rotating and translating an element-->
+</head>
+<body>
+    
+   <div class="container">
+        <div class="box">
+            <p>  box1 </p>
+        </div>
+   </div>
+</body>
+</html>
