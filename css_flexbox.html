@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS Flexbox</title>
+    <style>
+        .container{
+            background-color: beige;
+            border: 2px solid black;
+            margin: 10px;
+            /* when u set the displsy property to  flex all the boxes by default will arrange horizontally like row*/
+            /* means the boxes will be in row */
+            display: flex;
+
+            /* if u want to chnage the direction  from row to column specify fd to column */
+            /* when fd is row main axis will be horizontal and if its column main axis will be vertical */
+            flex-direction: row; /*row reverse means the colors of the boxes will be reversed*/
+
+            /* as we do text wrapping similarly boxes can also be wrapped to maintain the responsivesness ,even if u squeeze height and width of the box will remain 200px till it has space */
+            flex-wrap: wrap;
+
+            /* justify content main axis k  acc sari items place karega   */
+            /* flex direction row hai toh justify content items ko horizontally center mai place kr dega and column hoga toh verticall*/
+            /* justify-content: center; */
+
+
+            /*equal space will be created on the left and right of the boxes and thats why there will be double space around the middle boxes */
+            /* justify-content: space-around; */
+
+
+            /*  space-evenly will create even spaces around the boxes*/
+            /* justify-content: space-evenly; */
+
+
+            /* space-between will create spaces around the boxes and not start and end of the boxes */
+            /* justify-content: space-between;  */
+            justify-content: start;
+
+            height:800px;
+
+
+            /* jo bhi flex items hai unko kaise align krna hai and works on cross axis*/
+            /* note : justify-content — controls alignment of all items on the main axis. align-items — controls alignment of all items on the cross axis.  */
+            /* align-items: center; */
+            /* means vertically center mai items place hoga */
+            /* vertical : standing line
+             horizontal : sleeping line */
+
+
+             /* by deafualt stretch hi rahega if box height mentioned nahi hai toh  */
+             align-items: start; 
+
+
+             /* jab align content nahi tha toh there was a space in between th boxes when squeezed the dimensions */
+            /* align-content: start; */
+            /* align conent start krne se jo spaces thi vo hat jayegi and all the boxes will come together  */
+           
+
+
+        }
+        .box{
+           height: 100px;
+           width: 100px;
+           border: 2px solid black;
+           margin: 2px;
+           padding: 2px;
+        
+
+        }
+        
+        #box1{
+            background-color: blue;
+            /* chnages the order if it is on 1st place then by applying order will go last */
+            /* order: 500; */
+            /* shrinks 4x times than other boxes */
+            /* flex-shrink: 4; */
+           align-self: center;
+            
+        }
+
+        #box2{
+            background-color: brown;
+            
+            /* boxes takes up the entire space available*/
+            /* flex-grow: 5; */
+        }
+
+        #box3{
+            background-color: chartreuse;
+           
+        }
+
+
+
+        .container1{
+            background-color: beige;
+            border: 2px solid black;
+            margin: 10px;
+            /* shorthand notation for flex-direction and flex-wrap is flex-flow . */
+            /* You can specify one or two values, no matter the order. */
+            /* flex-flow: <‘flex-direction’> || <‘flex-wrap>; */
+            flex-flow: wrap row
+            
+        }
+
+        .boxx{
+           height: 100px;
+           width: 100px;
+           border: 2px solid black;
+           margin: 2px;
+        }
+
+        #box11{
+            background-color: blue;
+        }
+
+        #box22{
+            background-color: green;
+        }
+
+        #box33{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!--Arrangement of content in specific manner is called layouting  -->
+
+    <!-- flexbox (Flexible-Box) : provides flexibility-->
+
+    <!-- if u want to make the elemnet as flexible u need to mark the display : flex -->
+    <div class="container">
+        <div class="box" id="box1">box1</div>
+        <div class="box" id="box2">box2</div>
+        <div class="box" id="box3">box3</div>
+    </div>
+
+    <div class="container1">
+        <div class="boxx" id="box11"></div>
+        <div class="boxx" id="box22"></div>
+        <div class="boxx" id="box33"></div>
+    </div>
+    
+</body>
+</html>
