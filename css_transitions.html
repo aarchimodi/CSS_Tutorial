@@ -13,12 +13,12 @@
             border: 3px solid;
             padding: 10px;
 
-            /* TP means konsi property pe transition hona chahiye */
+            /* TP means on which of the property (like bg color,width) the transition should apply */
             /* transition-property:  background-color;
             transition-property: width; */
             transition-property: all;
-
-            /* kitne time tak transition hona chahiye */
+        
+            /* for how long the transition should work */
             transition-duration: 4s;
             transition-delay: 1s;
             transition-timing-function: ease-in-out;
@@ -26,10 +26,9 @@
             top: 50px;
            
     }
-    /* srf hover krne se bhi transition hoga but transition apply krne se smoothly transition hoga */
+    /* Just hovering will also cause transition but applying transition proprty will result in smooth transition. */
 
-    /* humne TP bg color pe set kiya hai so smoothly color chnage bg color hoga and width fatak se bdhega bec tp pe color ki set hai ywe can also set TP : all*/
-
+   
     /* pseudo class consists of colon and followed by any pseudo class name */
 
     .box:hover{
